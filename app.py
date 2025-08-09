@@ -1,6 +1,5 @@
 import streamlit as st
 import mysql.connector
-mysql-connector-python
 import bcrypt
 import pandas as pd
 import plotly.express as px
@@ -327,5 +326,6 @@ if not st.session_state.logged_in:
     login_page()
 else:
     dashboard()
+
 
 
