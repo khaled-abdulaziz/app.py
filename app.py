@@ -11,10 +11,10 @@ st.set_page_config(page_title="Jussy Dashboard", layout="wide")
 # ----------- MySQL connection -----------
 def get_connection():
     return mysql.connector.connect(
-        host="localhost",         # Change if your DB is remote
-        user="root",              # Your MySQL user
-        password="12345",         # Your MySQL password
-        database="login_system"
+        host=st.secrets["mysql"]["host"],
+        user=st.secrets["mysql"]["user"],
+        password=st.secrets["mysql"]["password"],
+        database=st.secrets["mysql"]["database"]
     )
 
 # ----------- Verify login credentials -----------
@@ -326,3 +326,4 @@ if not st.session_state.logged_in:
     login_page()
 else:
     dashboard()
+
