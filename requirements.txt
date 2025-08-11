@@ -4,6 +4,7 @@ plotly
 pillow
 mysql-connector-python
 openpyxl
-bcryptS
+bcrypt
+
 
 
